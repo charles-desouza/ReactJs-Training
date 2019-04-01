@@ -10,7 +10,7 @@ export default class IndecisionApp extends Component {
 
       const headerTitle = "Indecision";
       const footerTitle = "footer goes here";
-      const myOptions = ["Audience Poll", "Any 2","Phone a friend"];
+      const myOptions = ["One", "Two","Three"];
 
       return (
         <div>
