@@ -16,7 +16,7 @@ export default class Action extends Component {
         <div>
           <form onSubmit={this.callHandle}>
           <input type="text" name="demo" />
-          <button>Call me</button>
+          <button disabled={!this.props.hasOptions}>Call me</button>
           </form>
         </div>
       );

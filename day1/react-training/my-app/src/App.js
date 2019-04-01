@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import IndecisionApp from './components/indecisionApp';
+import Counter from './components/counter.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <IndecisionApp></IndecisionApp>
+        <IndecisionApp></IndecisionApp>
+        {/* <Counter></Counter> */}
         {/* <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
