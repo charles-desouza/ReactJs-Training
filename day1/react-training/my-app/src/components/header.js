@@ -6,7 +6,7 @@ export default class extends Component {
         return (
             <div>
                 <h1>Indecision</h1>
-                <h2>Put your life in the hands of a computer</h2>
+                <h2>{this.props.title}</h2>
             </div>
         )
     }
