@@ -2,14 +2,22 @@ import React, { Component } from 'react'
 
 
 export default class Action extends Component {
-  callme(){
-    console.log("i am called");
+  callHandle(e){
+    e.preventDefault();
+
+    const mydata = e.target.elements.demo.value.trim();
+
+    if(mydata)
+      console.log(mydata);
   }
 
     render() {
       return (
         <div>
-          <button onClick={this.callme}>What should I do?</button>
+          <form onSubmit={this.callHandle}>
+          <input type="text" name="demo" />
+          <button>Call me</button>
+          </form>
         </div>
       );
     }
