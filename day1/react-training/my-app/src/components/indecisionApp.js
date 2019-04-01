@@ -8,14 +8,15 @@ import Footer from './footer';
 export default class IndecisionApp extends Component {
     render() {
 
-      const headerTitle = "Put your life in the hands of a computer";
+      const headerTitle = "Indecision";
       const footerTitle = "footer goes here";
+      const myOptions = ["Audience Poll", "Any 2","Phone a friend"];
 
       return (
         <div>
           <Header title={headerTitle}/>
           <Action />
-          <Options />
+          <Options options={myOptions}/>
           <AddOption />
           <Footer title={footerTitle} />
         </div>

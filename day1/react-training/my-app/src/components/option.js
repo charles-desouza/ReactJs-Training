@@ -5,7 +5,7 @@ export default class Option extends Component {
     render() {
       return (
         <div>
-          Option component here
+          {this.props.optionText}
         </div>
       );
     }
