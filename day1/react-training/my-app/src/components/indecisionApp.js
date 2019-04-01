@@ -10,9 +10,10 @@ export default class IndecisionApp extends Component {
   constructor(props) {
     super(props);
     this.handleDeleteOptions = this.handleDeleteOptions.bind(this);
+    this.handleAddOption = this.handleAddOption.bind(this);
 
     this.state = {
-      options: ["One", "Two", "Three"]
+      options: []
     }
   }
 
@@ -36,6 +37,20 @@ export default class IndecisionApp extends Component {
     })
   }
 
+  handleAddOption(option) {
+
+    if(!option){
+      return 'Enter valid value to add item'
+    } else if( this.state.options.indexOf(option) > -1){
+      return 'This option already exists'
+    }
+    this.setState((prevState) => {
+      return {
+        options: prevState.options.concat(option)
+      };
+    });
+  }
+
   render() {
 
     const headerTitle = "Indecision";
@@ -46,7 +61,7 @@ export default class IndecisionApp extends Component {
         <Header title={headerTitle} />
         <Action hasOptions={this.state.options.length > 0} />
         <Options options={this.state.options} handleDeleteOptions={this.handleDeleteOptions} />
-        <AddOption />
+        <AddOption handleAddOption = {this.handleAddOption}/>
         <Footer title={footerTitle} />
       </div>
     );
