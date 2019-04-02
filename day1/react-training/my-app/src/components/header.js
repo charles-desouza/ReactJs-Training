@@ -20,4 +20,10 @@ import React, { Component } from 'react'
             </div>
     );
 }
+
+
+Header.defaultProps = {
+    title: 'Indecision1'
+};
+
 export default Header
