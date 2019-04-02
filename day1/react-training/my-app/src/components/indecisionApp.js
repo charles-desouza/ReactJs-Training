@@ -54,11 +54,12 @@ export default class IndecisionApp extends Component {
   render() {
 
     const headerTitle = "Indecision";
+    const headerSubTitle = "Put your life in the hands of a computer";
     const footerTitle = "footer goes here";
 
     return (
       <div>
-        <Header title={headerTitle} />
+        <Header title={headerTitle} subtitle={headerSubTitle} />
         <Action hasOptions={this.state.options.length > 0} />
         <Options options={this.state.options} handleDeleteOptions={this.handleDeleteOptions} />
         <AddOption handleAddOption = {this.handleAddOption}/>

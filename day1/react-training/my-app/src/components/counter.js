@@ -29,11 +29,12 @@ export default class Counter extends React.Component {
     console.log(this.state);
   }
   handleReset() {
-    this.setState((preState) =>{
+    this.setState(() =>{
         return {
               count : 0
         }
     });
+
     console.log(this.state);
   }
   render() {
